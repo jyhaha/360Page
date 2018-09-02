@@ -1,0 +1,128 @@
+/* 插件会默认生成一个div */
+.onePage>div{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(9, 191, 253);
+}
+.text img{
+    opacity: 0.5;
+    margin-left:30px; 
+}
+.text.animation img{
+    transition: all 2s;
+    opacity: 1;
+    margin-left:0px; 
+}
+
+/* 第二页 */
+
+.twoPage>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(152, 204, 56);
+}
+
+.shield img:last-child{
+    
+    transform: translate(700px,450px) rotate(370deg);
+}
+
+.shield.moveShield img:last-child{
+    transition: all 2s ;
+    transform: none;
+}
+
+/* 第三页 */
+
+.threePage>div{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(254, 164, 17);
+}
+
+.circle{
+    width: 453px;
+    height: 449px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: url(../images/circle.png);
+}
+.circle img{
+    transform: translate(-900px,450px);
+}
+
+.circle.circleMove img{
+    transition: all 2s;
+    transform: none;
+}
+
+
+/* 第四页 */
+.fourPage>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 127, 9);
+}
+.searchBox{
+    height:438px;
+    width: 529px;
+    margin-right: 50px;
+    transform: translate(-700px);
+    
+}
+.searchBox.searchBoxMove{
+    transition: all 1s;
+    transform: none;
+}
+
+.search{
+    width: 0px;
+    height: 66px;
+    background: url(../images/search.png);
+    position: relative;
+}
+.search.searchMove{
+    transition: all 2s 1s;   /*  等待searchBox动画完成,所以等待1s再执行  */
+    width: 100%;
+}
+
+.movieTitle{
+    width: 0;
+    height: 22px;
+    position: absolute;
+    left: 30px;
+    top:23px;
+    background: url(../images/key.png);
+}
+.movieTitle.movieTitleMove {
+    transition: all 2s 3s;
+    width: 100px;
+}
+
+.result{
+    flex: 1;
+    height: 0px;
+    background: url(../images/result.png);
+}
+
+.result.resultMove{
+    transition: all 2s 5s;    /*  等待searchMove动画完成,所以等待3s再执行  */
+    height:372px;
+}
+
+
+
+/* 第五页 */
+.fivePage>div{
+    background-color: rgb(135, 205, 234);
+}
+
